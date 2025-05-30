@@ -1,0 +1,16 @@
+<nav class="bg-gray-800 text-white p-4">
+  <div class="flex justify-between items-center">
+    <div class="font-bold">I Need Tours</div>
+    <button class="md:hidden" (click)="open = !open">☰</button>
+    <ul class="hidden md:flex space-x-4">
+      <li><a href="#actividades" class="hover:underline">Actividades</a></li>
+      <li><a href="#traslados" class="hover:underline">Traslados</a></li>
+      <li><a href="#hoteles" class="hover:underline">Hoteles</a></li>
+    </ul>
+  </div>
+  <ul *ngIf="open" class="md:hidden mt-2 space-y-2">
+    <li><a href="#actividades" class="block hover:underline">Actividades</a></li>
+    <li><a href="#traslados" class="block hover:underline">Traslados</a></li>
+    <li><a href="#hoteles" class="block hover:underline">Hoteles</a></li>
+  </ul>
+</nav>
