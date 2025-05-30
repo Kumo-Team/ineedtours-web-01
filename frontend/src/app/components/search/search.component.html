@@ -1,0 +1,7 @@
+<div class="m-4">
+  <input class="border p-2 w-full" type="text" placeholder="Buscar actividades" (input)="onInput($event)" [value]="query" />
+  <button class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Buscar</button>
+  <ul *ngIf="suggestions.length" class="border mt-2">
+    <li *ngFor="let s of suggestions" class="p-1 hover:bg-gray-100">{{ s }}</li>
+  </ul>
+</div>
