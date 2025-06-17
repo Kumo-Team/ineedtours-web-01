@@ -127,6 +127,12 @@ export class HeaderComponent implements OnInit {
     this.breakpoint.observe([Breakpoints.Handset]).subscribe(state => {
       this.isMobile = state.matches;
     });
+    // Set selectedLanguage based on saved language in TranslationService/localStorage
+    const currentLangCode = this.translationService.getCurrentLanguage();
+    const foundLang = this.languages.find(lang => lang.code === currentLangCode);
+    if (foundLang) {
+      this.selectedLanguage = foundLang;
+    }
   }
 
   // Dropdown logic
