@@ -3,21 +3,24 @@ import {MenuWeb} from "../../models/MenuWeb";
 import {NgForOf, NgIf} from "@angular/common";
 import {Language, TranslationService} from "../../services/translation.service";
 import {TranslatePipe} from "../../pipes/translate.pipe";
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {HeaderDesktopComponent} from './header-desktop.component';
+import {HeaderMobileComponent} from './header-mobile.component';
 
 @Component({
   selector: 'app-header',
   imports: [
-    NgForOf,
-    NgIf,
-    TranslatePipe
+      NgIf,
+    HeaderDesktopComponent,
+    HeaderMobileComponent
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public translationService: TranslationService) {}
-
+  constructor(public translationService: TranslationService,
+              private breakpoint: BreakpointObserver) {}
 
   isCurrencyMenuOpen = false;
   isLanguageMenuOpen = false;
@@ -118,8 +121,12 @@ export class HeaderComponent implements OnInit {
       }
     ];
 
-  ngOnInit() {
+  isMobile = false;
 
+  ngOnInit() {
+    this.breakpoint.observe([Breakpoints.Handset]).subscribe(state => {
+      this.isMobile = state.matches;
+    });
   }
 
   // Dropdown logic

@@ -1,0 +1,38 @@
+<header class="bg-ineedTours text-white shadow-md w-full">
+  <div class="px-4 py-3 flex items-center w-full">
+    <button (click)="toggleMenu()" class="material-icons text-white">{{menuOpen ? 'close' : 'menu'}}</button>
+
+    <div class="flex-1 flex justify-center">
+      <img class="h-8" src="https://www.ineedtours.com/CMS/Servidor/Ineedtours/galeria/756____logo_43.png" alt="logo">
+    </div>
+
+    <button class="material-icons text-white ml-auto">person</button>
+  </div>
+  <nav *ngIf="menuOpen" class="px-4 pb-4 flex flex-col gap-4 dropdown-animate">
+    <a *ngFor="let item of menuWebItems" href="/{{item.link}}" class="text-white header-link-list-item">
+      {{item.name | translate}}
+    </a>
+    <div class="flex flex-col gap-1">
+      <button data-mobile-currency (click)="toggleCurrencyMenu()" class="flex items-center gap-1">
+        {{selectedCurrency.symbol}} {{selectedCurrency.name}}
+        <span class="material-icons">{{isCurrencyMenuOpen ? 'expand_less':'expand_more'}}</span>
+      </button>
+      <ul *ngIf="isCurrencyMenuOpen" data-mobile-currency-list class="bg-white rounded text-slate-900 p-2">
+        <li *ngFor="let currency of currencies" (click)="selectCurrency(currency)" class="p-1 hover:bg-slate-200 cursor-pointer">
+          {{currency.symbol}} {{currency.name}}
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-1">
+      <button data-mobile-language (click)="toggleLanguageMenu()" class="flex items-center gap-1">
+        {{selectedLanguage.name | translate}}
+        <span class="material-icons">{{isLanguageMenuOpen ? 'expand_less':'expand_more'}}</span>
+      </button>
+      <ul *ngIf="isLanguageMenuOpen" data-mobile-language-list class="bg-white rounded text-slate-900 p-2">
+        <li *ngFor="let language of languages" (click)="selectLanguage(language)" class="p-1 hover:bg-slate-200 cursor-pointer">
+          {{language.name | translate}}
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
