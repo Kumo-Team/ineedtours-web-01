@@ -19,7 +19,7 @@
       </button>
       <ul *ngIf="isCurrencyMenuOpen" data-mobile-currency-list class="bg-white rounded text-slate-900 p-2">
         <li *ngFor="let currency of currencies" (click)="selectCurrency(currency)" class="p-1 hover:bg-slate-200 cursor-pointer">
-          {{currency.symbol}} {{currency.name}}
+          {{currency.symbol}} {{currency.name | translate}}
         </li>
       </ul>
     </div>

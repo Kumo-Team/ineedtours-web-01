@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
 
 .bg-ineedTours{
     background-color: #38CCC7;
@@ -7,4 +14,8 @@
 
 .color-ineedTours{
     color: #38CCC7;
+}
+
+.bg-footerBg{
+    background-color: #26262C;
 }

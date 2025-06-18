@@ -14,6 +14,11 @@ export const ES_TRANSLATIONS: Translations = {
     english: 'Inglés',
     italian: 'Italiano',
 
+    //currency selector
+    euro: 'Euro',
+    usd: 'Dólar',
+    gbp: 'Libra Esterlina',
+
     //footer
     ourOffer: "Ofrecemos visitas panorámicas, visitas a museos, tours privados, excursiones de medio día y de día entero, circuitos, traslados, tarjetas de ciudad y mucho más!",
     company: "Compañía",
@@ -23,7 +28,7 @@ export const ES_TRANSLATIONS: Translations = {
     blog: "Blog",
     loveOurCookies: "Amarás nuestras cookies",
     termsAndConditions: "Asombrosos Términos y condiciones",
-    joinUs: "Unete a nosotros",
+    joinUs: "Únete a nosotros",
     employment: "Empleo",
     agencies: "Agencias",
     affiliates: "Afiliados",

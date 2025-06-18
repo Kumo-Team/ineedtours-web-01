@@ -13,6 +13,12 @@ export interface Translations {
     english: string;
     italian: string;
 
+    //currency selector
+    euro: string;
+    usd: string;
+    gbp: string;
+
+
     //footer
     ourOffer: string;
     company: string;

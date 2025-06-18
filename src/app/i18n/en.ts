@@ -15,6 +15,10 @@ export const EN_TRANSLATIONS: Translations = {
     english: 'English',
     italian: 'Italian',
 
+    euro: 'Euro',
+    usd: 'Dollar',
+    gbp: 'Pound',
+
     //footer
     ourOffer: "We offer panoramic tours, museum visits, private tours, half-day and full-day excursions, circuits, transfers, city cards, and much more!",
     company: "Company",

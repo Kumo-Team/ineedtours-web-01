@@ -15,6 +15,10 @@ export const IT_TRANSLATIONS: Translations = {
     english: 'Inglese',
     italian: 'Italiano',
 
+    euro: 'Euro',
+    usd: 'Dollaro',
+    gbp: 'Sterlina Britannica',
+
     //footer
     ourOffer: "Offriamo tour panoramici, visite ai musei, tour privati, escursioni di mezza giornata e di un'intera giornata, circuiti, trasferimenti, city card e molto altro!",
     company: "Azienda",

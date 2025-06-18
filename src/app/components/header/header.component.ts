@@ -37,15 +37,15 @@ export class HeaderComponent implements OnInit {
 
   currencies = [
       {
-        name: "Euro",
+        name: "euro",
         symbol: "€"
       },
       {
-        name: "Dollar",
+        name: "usd",
         symbol: "$"
       },
       {
-        name: "Pound",
+        name: "gbp",
         symbol: "£"
       }
 

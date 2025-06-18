@@ -14,6 +14,12 @@ export const POR_TRANSLATIONS: Translations = {
     english: 'Inglês',
     italian: 'Italiano',
 
+    //currency selector
+    euro: 'Euro',
+    usd: 'Dólar',
+    gbp: 'Libra Esterlina',
+
+
     //footer
     ourOffer: "Oferecemos passeios panorâmicos, visitas a museus, tours privados, excursões de meio dia e dia inteiro, circuitos, traslados, cartões turísticos e muito mais!",
     company: "Empresa",
